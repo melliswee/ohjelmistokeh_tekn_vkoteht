@@ -1,5 +1,6 @@
 import http_pyynto
 
+# viikko 4, github actions
 # rivillä 10 poistetaan välilyönnit jotta smart post- muotoiset merkinnät menevät smartpost-muotoisten kanssa samaan paikkaan listassa
 
 
