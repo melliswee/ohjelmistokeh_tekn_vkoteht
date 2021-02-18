@@ -82,28 +82,28 @@ def test_json_loytyy_korvatunturi():
 # huom: tämä testi ei mene läpi, jos tekee korjauksen koodiin, jossa välilyönti poistetaan
 
 
-def test_smartpost_ja_smart_post_tulosten_lkm_ero():
-    tulos = postinumerot_testattava.ryhmittele_toimipaikoittain(lue_tiedosto())
-    smartpost_nrot = tulos.get('SMARTPOST')
-    smart_post_nrot = tulos.get('SMART POST')
+# def test_smartpost_ja_smart_post_tulosten_lkm_ero():
+    #tulos = postinumerot_testattava.ryhmittele_toimipaikoittain(lue_tiedosto())
+    #smartpost_nrot = tulos.get('SMARTPOST')
+    #smart_post_nrot = tulos.get('SMART POST')
     # testaa onko saatuja tuloksia eri määrä
-    assert len(smart_post_nrot) != len(smartpost_nrot)
+    #assert len(smart_post_nrot) != len(smartpost_nrot)
 
 # osoitus että eri kirjoitusasut tuovat eri tulokset
 # huom: tämä testi ei mene läpi, jos tekee korjauksen koodiin, jossa välilyönti poistetaan
 
 
-def test_smart_post_nro_ei_loydy_smartpost_nroista():
-    tulos = postinumerot_testattava.ryhmittele_toimipaikoittain(lue_tiedosto())
-    smartpost_nrot = tulos.get('SMARTPOST')
+# def test_smart_post_nro_ei_loydy_smartpost_nroista():
+    #tulos = postinumerot_testattava.ryhmittele_toimipaikoittain(lue_tiedosto())
+    #smartpost_nrot = tulos.get('SMARTPOST')
 
-    loytyy = True  # lippu, nollahypoteesi: smart_post_esim_nro löytyy smartpost_nrot:sta. Jos ei löydy, nollahypoteesi hylätään
-    smart_post_esim_nro = '40934'
+    # loytyy = True  # lippu, nollahypoteesi: smart_post_esim_nro löytyy smartpost_nrot:sta. Jos ei löydy, nollahypoteesi hylätään
+    #smart_post_esim_nro = '40934'
 
-    if smart_post_esim_nro not in smartpost_nrot:
-        loytyy = False  # ei löytynyt, nollahypoteesi hylätään
+    # if smart_post_esim_nro not in smartpost_nrot:
+    # loytyy = False  # ei löytynyt, nollahypoteesi hylätään
 
-    assert loytyy == False
+    #assert loytyy == False
 
 #######################################################
 # välilyönnin poiston jälkeen nämä testit toimivat
@@ -111,10 +111,10 @@ def test_smart_post_nro_ei_loydy_smartpost_nroista():
 # tämä testi ei toimi kun on tehty korjaus smartpsot-muodolle
 
 
-def test_valilyonnin_poisto_tuottaa_odotetun_lkmn():
-    tulos = postinumerot_testattava.ryhmittele_toimipaikoittain(lue_tiedosto())
-    smartpost_nrot = tulos.get('SMARTPOST')
-    assert len(smartpost_nrot) == 813
+# def test_valilyonnin_poisto_tuottaa_odotetun_lkmn():
+    #tulos = postinumerot_testattava.ryhmittele_toimipaikoittain(lue_tiedosto())
+    #smartpost_nrot = tulos.get('SMARTPOST')
+    #assert len(smartpost_nrot) == 813
 
 
 def test_entinen_smart_post_nro_loytyy_smartpost_nroista():
